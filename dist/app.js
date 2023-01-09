@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const todos_1 = __importDefault(require("./routes/todos"));
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
 app.use("/todos", todos_1.default);
 // app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
 // })
